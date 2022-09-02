@@ -34,4 +34,15 @@ def find_lowest_cost_node(costs):
     return lowest_cost_node
 
 
-def dje
+# dijkstra_algorithm
+node = find_lowest_cost_node(costs)
+while node is not None:
+    cost = costs[node]
+    neighbors = graph[node]
+    for neighbor in neighbors:
+        new_cost = cost + neighbors[neighbor]
+        if costs[neighbor] > new_cost:
+            costs[neighbor] = new_cost
+            parents[neighbor] = node
+    processed.append(node)
+    node = find_lowest_cost_node(costs)
