@@ -20,7 +20,3 @@ def breadth_first_search(name: str) -> str:
                 search_queue += graph[person]
                 searched.append(person)
     return 'There is no seller'
-
-
-
-
