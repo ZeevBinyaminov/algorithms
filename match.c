@@ -1,15 +1,15 @@
 #include <string.h>
 #include <stdio.h>
 
-int findmath(char* p, char* t);
+int find_math(char* p, char* t);
 
 int main() {
-    char* string = "there are some words";
-    char* substring = "are";
-    printf("%d", findmath(substring, string));
+    char string[] = "there are some words";
+    char substring[] = "some";
+    printf("%d", find_math(substring, string));
 }
 
-int findmath(char* p, char* t) {
+int find_math(char* p, char* t) {
     int i, j;
     int plen, tlen;
 
